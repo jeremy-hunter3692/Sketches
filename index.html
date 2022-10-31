@@ -7,4 +7,21 @@
   html{width:100%;height:100%;display:flex;justify-content:center;align-items:center;flex-direction:column}
   body{width:100%;height:100%;background-color:rgb(255, 251, 251); display:flex;justify-content:center;align-items:center;flex-direction:row;margin:0}
   canvas{margin:auto;display:block;box-shadow:0 20px 20px -2px rgba(255, 255, 255, 0.15)}</style>
-  <body><script src=lines.js></script>
+  
+    <button onClick="next()">next</button>
+    <script>
+      let scriptSrc = ["circles.js",]
+      function next(){
+      let scriptSrc = document.getElementById('sketch')
+        
+       let newScriptTag = document.createElement('script');
+       newScriptTag.src = "./sketches/public/circles.js"
+       newScriptTag.textContent ="hello"
+      console.log(newScriptTag)
+      let body = document.getElementsByTagName('body')[0];
+      scriptSrc.remove();
+      body.appendChild(newScriptTag);
+    }
+      </script>
+
+  <body><script id ="sketch" src="main.js"></script>
