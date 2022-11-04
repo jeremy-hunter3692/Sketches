@@ -9,15 +9,22 @@ const settings = {
   animate: true,
 
   playbackRate: 'throttle',
-  fps: 2,
+  fps: 3,
 }
 let index = 2
 const sketch = () => {
-  const colourArray = ['red', 'white', 'ForestGreen', 'blue', 'black', 'black']
-  const lineColourArray = ['blue', 'black', 'Olive ', 'aqua', 'white', 'white']
+  const colourArray = ['red', 'white', 'darkGreen', 'blue', 'black', 'black']
+  const lineColourArray = [
+    'blue',
+    'black',
+    'YellowGreen',
+    'aqua',
+    'white',
+    'white',
+  ]
 
   return ({ context, width, height }) => {
-    if (Math.random() > 0.9) {
+    if (Math.random() > 0.95) {
       index > 4 ? (index = 0) : (index = index + 1)
     }
 
@@ -45,15 +52,6 @@ const sketch = () => {
         context.stroke()
 
         if (Math.random() > 0.5) {
-          // if (Math.random() > 0.6) {
-          //   let off2 = off - 0.5
-          //   context.beginPath()
-          //   context.lineWidth = 2
-          //   context.rect(x + off2 / 4, y + off2 / 4, w - off2, h - off2)
-          //   context.strokeStyle = 'red'
-          //   context.stroke()
-          // }
-
           context.beginPath()
           context.lineWidth = 4
           context.rect(x + off / 2, y + off / 2, w - off, h - off)

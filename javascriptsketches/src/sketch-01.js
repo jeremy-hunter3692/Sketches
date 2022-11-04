@@ -1,6 +1,6 @@
 const canvasSketch = require('canvas-sketch')
-const math = require('canvas-sketch-util/math')
-const random = require('canvas-sketch-util/random')
+// const math = require('canvas-sketch-util/math')
+// const random = require('canvas-sketch-util/random')
 
 const settings = {
   dimensions: [1080, 1080],
@@ -11,8 +11,8 @@ const settings = {
 }
 let index = 2
 const sketch = () => {
-  const colourArray = ['red', 'white', 'ForestGreen', 'blue', 'black', 'black']
-  const lineColourArray = ['blue', 'black', 'Olive ', 'aqua', 'white', 'white']
+  const colourArray = ['red', 'white', 'green', 'blue', 'black', 'black']
+  const lineColourArray = ['blue', 'black', 'green ', 'aqua', 'white', 'white']
 
   return ({ context, width, height }) => {
     if (Math.random() > 0.9) {

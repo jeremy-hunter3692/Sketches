@@ -10,7 +10,7 @@ const settings = {
 const sketch = () => {
   let black = true
   return ({ context, width, height }) => {
-    if (Math.random() > 0.9) {
+    if (Math.random() > 0.99) {
       black = !black
       // console.log('random', black)
     }
@@ -46,7 +46,7 @@ const sketch = () => {
         context.fillRect(x, y, w, h)
         context.stroke()
 
-        if (Math.random() > 0.3) {
+        if (Math.random() > 0.5) {
           context.lineWidth = rNo
           //context.strokeStyle = 'white';
           context.beginPath()

@@ -3,10 +3,12 @@ import Container from './Container'
 import Warning from './Warning'
 import './App.css'
 
+const sketchesSelector = ['circles','sketch1', 'sketch2', 'sketch3']
+
 function App() {
-  const [bool, setBool] = useState(true)
-  const [index, setIndex] = useState(false)
+  const [index, setIndex] = useState(0)
   const [warning, setWarning] = useState(true)
+
   return (
     <>
       <div className="app">
@@ -24,11 +26,11 @@ function App() {
         ) : (
           <div>
             {' '}
-            <Container index={index} />
+            <Container state={sketchesSelector[index]} />
             <button
               onClick={() => {
-                setIndex(!index)
-                console.log('click', index)
+                setIndex(index + 1)
+                console.log('click', index, sketchesSelector[index])
               }}
             >
               Change

@@ -5,15 +5,14 @@ const settings = {
   dimensions: [1080, 1080],
   animate: true,
   playbackRate: 'throttle',
-  fps: 6,
+  fps: 3,
 }
 
 const sketch = () => {
   let black = true
   return ({ context, width, height }) => {
-    if (Math.random() > 0.9) {
+    if (Math.random() > 0.98) {
       black = !black
-      // console.log('random', black)
     }
     context.fillStyle = black ? 'white' : 'black'
     context.fillRect(0, 0, width, height)
@@ -21,9 +20,7 @@ const sketch = () => {
     function randNo(min, max) {
       return Math.floor(Math.random() * (max - min + 1)) + min
     }
-    //console.log(rNo);
-    //context.lineWidth = (width * rNo)/1000;
-    //console.log((600 * rNo)/1000);
+
     context.strokeStyle = black ? 'black' : 'white'
 
     const w = width * 0.05
@@ -47,7 +44,9 @@ const sketch = () => {
         context.fillRect(x, y, w, h)
         context.stroke()
 
-        if (Math.random() > 0.3) {
+        let randomValue = Math.random()
+
+        if (Math.random() > randomValue + 0.2) {
           context.lineWidth = rNo
           //context.strokeStyle = 'white';
           context.beginPath()
