@@ -11,7 +11,7 @@ const settings = {
 const sketch = () => {
   let black = true
   return ({ context, width, height }) => {
-    if (Math.random() > 0.98) {
+    if (Math.random() > 0.9) {
       black = !black
     }
     context.fillStyle = black ? 'white' : 'black'

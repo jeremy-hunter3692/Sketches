@@ -5,7 +5,7 @@ const settings = {
   dimensions: [ 1080, 1080 ]
 };
 
-let manager; 
+
 
 
 let text = 'DOXA';

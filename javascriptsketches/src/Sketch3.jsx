@@ -29,7 +29,7 @@ const sketch = () => {
     const radius = width * 0.3 //the radius of the circle that the outer lines are drawn
     let radiusChange
     let innerCircleColour = 'black'
-    if (frame > 300) {
+    if (frame > 500) {
       innerCircleColour = 'white'
       h = height * 0.9
     }

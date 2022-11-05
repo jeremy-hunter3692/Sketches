@@ -3,7 +3,15 @@ import Container from './Container'
 import Warning from './Warning'
 import './App.css'
 
-const sketchesSelector = ['circles','sketch1', 'sketch2', 'sketch3']
+const sketchesSelector = [
+  // 'sketch5',
+  'circles',
+  'sketch4',
+  'sketch1',
+  'sketch2',
+  'sketch3',
+  'sketch6',
+]
 
 function App() {
   const [index, setIndex] = useState(0)
