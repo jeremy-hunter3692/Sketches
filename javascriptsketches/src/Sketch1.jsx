@@ -13,15 +13,8 @@ const settings = {
 }
 let index = 2
 const sketch = () => {
-  const colourArray = ['red', 'white', 'darkGreen', 'blue', 'black', 'black']
-  const lineColourArray = [
-    'blue',
-    'black',
-    'YellowGreen',
-    'aqua',
-    'white',
-    'white',
-  ]
+  const colourArray = ['red', 'white', 'white', 'blue', 'black', 'black']
+  const lineColourArray = ['blue', 'black', 'black', 'aqua', 'white', 'white']
 
   return ({ context, width, height }) => {
     if (Math.random() > 0.95) {

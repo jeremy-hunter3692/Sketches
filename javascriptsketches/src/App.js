@@ -4,13 +4,13 @@ import Warning from './Warning'
 import './App.css'
 
 const sketchesSelector = [
-  // 'sketch5',
-  'circles',
   'sketch4',
+  'sketch5',
+  'sketch3',
+  'circles',
   'sketch1',
   'sketch2',
-  'sketch3',
-  'sketch6',
+  'sketch7',
 ]
 
 function App() {
@@ -35,13 +35,18 @@ function App() {
           <div>
             {' '}
             <Container state={sketchesSelector[index]} />
+            <br></br>
             <button
               onClick={() => {
-                setIndex(index + 1)
+                if (index === 6) {
+                  setIndex(0)
+                } else {
+                  setIndex(index + 1)
+                }
                 console.log('click', index, sketchesSelector[index])
               }}
             >
-              Change
+              Next
             </button>{' '}
           </div>
         )}

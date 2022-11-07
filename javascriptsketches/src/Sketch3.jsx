@@ -15,7 +15,7 @@ const sketch = () => {
   return ({ context, width, height, frame }) => {
     context.fillStyle = 'white'
     context.fillRect(0, 0, width, height)
-    console.log(frame)
+    // console.log(frame)
     context.fillStyle = 'black'
 
     const cx = width * 0.5 //centre of the circle co-ords. i.e half the wight and height of canvas
@@ -29,18 +29,18 @@ const sketch = () => {
     const radius = width * 0.3 //the radius of the circle that the outer lines are drawn
     let radiusChange
     let innerCircleColour = 'black'
-    if (frame > 500) {
+    if (frame > 400) {
       innerCircleColour = 'white'
       h = height * 0.9
     }
-    if (frame > 400) {
+    if (frame > 250) {
       innerCircleColour = 'black'
     }
 
     for (let i = 0; i < numOfLines; i++) {
       //iterateor for drawing the outer lines and more
       //if random is set outside loop the circle will be consisent b/c random is generate once not each loop
-      frame > 50 && frame < 250
+      frame > 50 && frame < 150
         ? (radiusChange = random.range(0.2, 0.8))
         : (radiusChange = 0.5)
       const slice = math.degToRad(360 / numOfLines) //size of the slice making them even
@@ -52,7 +52,7 @@ const sketch = () => {
       context.save()
       context.translate(x, y)
       context.rotate(-angle)
-      if (frame > 400) {
+      if (frame > 250) {
         context.scale(3, 1)
       } // scales x and y from the center.
 

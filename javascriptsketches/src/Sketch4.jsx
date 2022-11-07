@@ -85,10 +85,14 @@ class Vector {
 }
 animate(); */
 
+const veloctiyNo = 0.1
 class Agent {
   constructor(x, y) {
     this.pos = new Vector(x, y)
-    this.vel = new Vector(random.range(1.5, -1.5), random.range(1.5, 1.5))
+    this.vel = new Vector(
+      random.range(veloctiyNo, -veloctiyNo),
+      random.range(veloctiyNo, veloctiyNo)
+    )
     this.radius = 0.1 //random.range(1,1);
   }
 
