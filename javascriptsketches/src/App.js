@@ -5,6 +5,7 @@ import './App.css'
 
 const sketchesSelector = [
   'sketch4',
+  'sketch6',
   'sketch5',
   'sketch3',
   'circles',
@@ -38,7 +39,7 @@ function App() {
             <br></br>
             <button
               onClick={() => {
-                if (index === 6) {
+                if (index === 8) {
                   setIndex(0)
                 } else {
                   setIndex(index + 1)
